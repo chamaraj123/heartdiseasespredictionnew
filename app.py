@@ -1,6 +1,7 @@
 
 from flask import Flask,request, render_template
 import pickle
+import sklearn
 
 #set up application
 app=Flask(__name__) 
