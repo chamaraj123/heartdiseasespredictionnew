@@ -7,7 +7,7 @@ app=Flask(__name__)
 
 #defining prediction function
 def prediction(lst):
-    filename='model\\rfmodel1.pickle'
+    filename='model\fmodel1.pickle'
     with open(filename,'rb') as file:
         model=pickle.load(file)
     pred_value=model.predict([lst])
@@ -40,7 +40,7 @@ def index():
         feature_list.append(float(employment))
         
         print(feature_list)
-        pred=prediction(feature_list)[0]
+        pred=prediction(feature_list)
      
     return render_template("index.html",pred=pred)
 
