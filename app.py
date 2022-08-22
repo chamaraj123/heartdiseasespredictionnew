@@ -7,7 +7,7 @@ app=Flask(__name__)
 
 #defining prediction function
 def prediction(lst):
-    filename='model\fmodel1.pickle'
+    filename='fmodel1.pickle'
     with open(filename,'rb') as file:
         model=pickle.load(file)
     pred_value=model.predict([lst])
