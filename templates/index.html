@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Heart Disease Predictor</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="title">Heart Disease Predictor</div>
+        <form action="/" method="POST">
+            <div class="form">
+                
+                <div class="inputfield">
+                    <label for="Exercise_2.0_yes">During the past month, other than your regular job, did you participate in any physical activities or exercises such as running, calisthenics, golf, gardening, or walking for exercise?</label>
+                    <div class = "custom_select">
+                        <select name="Exercise_2.0_yes" id="Exercise_2.0_yes" required>
+                            <option value="" selected hidden>Select</option>
+                            <option value="0">Yes</option>
+                            <option value="1">No</option>
+                            
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="inputfield">
+                    <label for="Asthma_1.0_yes">(Ever told) (you had) asthma?</label>
+                    <div class = "custom_select">
+                        <select name="Asthma_1.0_yes" id="Asthma_1.0_yes" required>
+                            <option value="" selected hidden>Select</option>
+                            <option value="1">Yes</option>
+                            <option value="0">No</option>
+                            
+                        </select>
+                    </div>
+                </div>
+
+                <div class="inputfield">
+                    <label for="COPD/Chronic_Bronchitis_1.0_yes">(Ever told) (you had) chronic obstructive pulmonary disease, C.O.P.D., emphysema or chronic bronchitis?</label>
+                    <div class = "custom_select">
+                        <select name="COPD/Chronic_Bronchitis_1.0_yes" id="COPD/Chronic_Bronchitis_1.0_yes" required>
+                            <option value="" selected hidden>Select</option>
+                            <option value="1">Yes</option>
+                            <option value="0">No</option>
+                            
+                        </select>
+                    </div>
+                </div>
+
+                <div class="inputfield">
+                    <label for="Arthritis_1.0_yes">(Ever told) (you had) some form of arthritis, rheumatoid arthritis, gout, lupus, or fibromyalgia? (Arthritis diagnoses include: rheumatism, polymyalgia rheumatica; osteoarthritis (not osteporosis); tendonitis, bursitis, bunion, tennis elbow; carpal tunnel syndrome, tarsal tunnel syndrome; joint infection, etc.) </label>
+                    <div class = "custom_select">
+                        <select name="Arthritis_1.0_yes" id="Arthritis_1.0_yes" required>
+                            <option value="" selected hidden>Select</option>
+                            <option value="1">Yes</option>
+                            <option value="0">No</option>
+                            
+                        </select>
+                    </div>
+                </div>
+
+                <div class="inputfield">
+                    <label for="Depressive_disorder_1.0_yes">(Ever told) (you had) a depressive disorder (including depression, major depression, dysthymia, or minor depression)?</label>
+                    <div class = "custom_select">
+                        <select name="Depressive_disorder_1.0_yes" id="Depressive_disorder_1.0_yes" required>
+                            <option value="" selected hidden>Select</option>
+                            <option value="1">Yes</option>
+                            <option value="0">No</option>
+                            
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="inputfield">
+                    <label for="Concentration_Difficulty_1.0_yes">Because of a physical, mental, or emotional condition, do you have serious difficulty concentrating, remembering, or making decisions?</label>
+                    <div class = "custom_select">
+                        <select name="Concentration_Difficulty_1.0_yes" id="Concentration_Difficulty_1.0_yes" required>
+                            <option value="" selected hidden>Select</option>
+                            <option value="1">Yes</option>
+                            <option value="0">No</option>
+                            
+                        </select>
+                    </div>
+                </div>
+
+                <div class="inputfield">
+                    <label for="Serious_Walking_Difficulty_1.0_yes">Do you have serious difficulty walking or climbing stairs?:</label>
+                    <div class = "custom_select">
+                        <select name="Serious_Walking_Difficulty_1.0_yes" id="Serious_Walking_Difficulty_1.0_yes" required>
+                            <option value="" selected hidden>Select</option>
+                            <option value="1">Yes</option>
+                            <option value="0">No</option>
+                            
+                        </select>
+                    </div>
+                </div>
+
+                <div class="inputfield">
+                    <label for="Employment_Status_8.0_yes">Are you currently unable to work?</label>
+                    <div class = "custom_select">
+                        <select name="Employment_Status_8.0_yes" id="Employment_Status_8.0_yes" required>
+                            <option value="" selected hidden>Select</option>
+                            <option value="1">Yes</option>
+                            <option value="0">No</option>
+                            
+                        </select>
+                    </div>
+                </div>
+
+            
+    
+                <div class="inputfield">
+                    <input class="btn" type="submit" value="Prediction">
+                </div>
+            </div>
+        </form>
+
+        <div class="result">
+          
+           
+            {% if pred == 1 %}
+            <p>Result : Risk of having Heart Disease</p>
+            {% endif %}
+            {% if pred == 0 %}
+            <p>Result : No Risk of having Heart Disease}</p>
+            {% endif %}
+
+            
+           
+        </div>
+    </div>
+</body>
+</html>
