@@ -40,7 +40,7 @@ def index():
         feature_list.append(float(employment))
         
         print(feature_list)
-        pred=prediction(feature_list)
+        pred=prediction(feature_list)[0]
      
     return render_template("index.html",pred=pred)
 
